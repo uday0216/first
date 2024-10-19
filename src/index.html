@@ -6,12 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Vanilla JavaScript App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
 </head>
 
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message"></p>
   </main>
+
+  <script>
+    function showMessage() {
+      document.getElementById('message').textContent = 'Hello! You just interacted with Vanilla JavaScript!';
+    }
+  </script>
 </body>
 
 </html>
