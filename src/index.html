@@ -1,128 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav" class="nav">
+      <img class="nav__logo" src="images/netflix-logo.png" alt="" />
+      <img class="nav__avatar" src="images/netflix-avatar.png" alt="" />
+    </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donut Shop</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #fff7e6;
-      text-align: center;
-      padding: 50px;
-      transition: background-color 0.5s ease;
-    }
+    <!-- header -->
+    <header class="banner">
+      <div class="banner__contents">
+        <h1 class="banner__title">Money Heist</h1>
+        <div class="banner__buttons">
+          <button class="banner__button">Play</button>
+          <button class="banner__button">My List</button>
+        </div>
+        <h1 class="banner__description">
+          To carry out the biggest heist in history, a mysterious man called The Professor recruits
+          a band of eight robbers who have a single characteristic: n...
+        </h1>
+      </div>
+      <div class="banner--fadeBottom"></div>
+    </header>
 
-    h1 {
-      color: #ff5722;
-    }
+    <!-- Netflix Originals -->
+    <div class="row">
+      <h2>NETFLIX ORIGINALS</h2>
+      <div class="row__posters">
+        <img class="row__poster row__posterLarge" src="images/large-movie1.jpg" alt="" />
 
-    button {
-      padding: 15px 30px;
-      font-size: 18px;
-      cursor: pointer;
-      background-color: #ff4081;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
+        <img class="row__poster row__posterLarge" src="images/large-movie2.jpg" alt="" />
 
-    button:hover {
-      background-color: #e91e63;
-    }
+        <img class="row__poster row__posterLarge" src="images/large-movie3.jpg" alt="" />
 
-    #donut-message {
-      margin-top: 20px;
-      font-size: 28px;
-      color: #795548;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
+        <img class="row__poster row__posterLarge" src="images/large-movie4.jpg" alt="" />
 
-    #donut-message.show {
-      opacity: 1;
-    }
+        <img class="row__poster row__posterLarge" src="images/large-movie5.jpg" alt="" />
 
-    #donut-img {
-      margin-top: 20px;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 0.5s ease-in-out;
-    }
+        <img class="row__poster row__posterLarge" src="images/large-movie6.jpg" alt="" />
 
-    #donut-img.show {
-      opacity: 1;
-    }
-  </style>
-</head>
+        <img class="row__poster row__posterLarge" src="images/large-movie7.jpg" alt="" />
 
-<body>
-  <main>
-    <h1>Welcome to the Donut Shop</h1>
-    <button onclick="showRandomDonut()">What Donut Do You Want?</button>
-    <p id="donut-message"></p>
-    <img id="donut-img" src="" alt="Donut Image">
-  </main>
+        <img class="row__poster row__posterLarge" src="images/large-movie8.jpg" alt="" />
+      </div>
+    </div>
 
-  <script>
-    const donuts = [
-      {
-        name: "Classic Glazed",
-        image: "https://via.placeholder.com/150/ffcc99/000000?text=Glazed"
-      },
-      {
-        name: "Chocolate Frosted",
-        image: "https://via.placeholder.com/150/795548/ffffff?text=Chocolate"
-      },
-      {
-        name: "Strawberry Sprinkles",
-        image: "https://via.placeholder.com/150/ff4081/ffffff?text=Strawberry"
-      },
-      {
-        name: "Boston Cream",
-        image: "https://via.placeholder.com/150/d4a373/000000?text=Boston+Cream"
-      },
-      {
-        name: "Maple Bacon",
-        image: "https://via.placeholder.com/150/cd7f32/ffffff?text=Maple+Bacon"
-      }
-    ];
+    <!-- Trending Now -->
+    <div class="row">
+      <h2>Trending Now</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
 
-    function getRandomDonut() {
-      const randomIndex = Math.floor(Math.random() * donuts.length);
-      return donuts[randomIndex];
-    }
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
 
-    function showRandomDonut() {
-      const donut = getRandomDonut();
-      const messageElement = document.getElementById('donut-message');
-      const imgElement = document.getElementById('donut-img');
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
 
-      messageElement.textContent = `Your choice: ${donut.name}`;
-      imgElement.src = donut.image;
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
 
-      messageElement.classList.add('show');
-      imgElement.classList.add('show');
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
 
-      // Change background color for fun
-      document.body.style.backgroundColor = getRandomColor();
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
 
-      // Reset animation after 4 seconds
-      setTimeout(() => {
-        messageElement.classList.remove('show');
-        imgElement.classList.remove('show');
-      }, 4000);
-    }
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
 
-    function getRandomColor() {
-      const colors = ['#fff7e6', '#ffe6e6', '#f5f5f5', '#ffe4b5', '#e0ffff'];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-  </script>
-</body>
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
 
+    <!-- Top Rated -->
+    <div class="row">
+      <h2>Top Rated</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Action Movies -->
+    <div class="row">
+      <h2>Action Movies</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Comedy Movies -->
+    <div class="row">
+      <h2>Comedy Movies</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Horror Movies -->
+    <div class="row">
+      <h2>Horror Movies</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Romance Movies -->
+    <div class="row">
+      <h2>Romance Movies</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Documentaries -->
+    <div class="row">
+      <h2>Documentaries</h2>
+      <div class="row__posters">
+        <img class="row__poster" src="images/small-movie1.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie2.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie3.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie4.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie5.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie6.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie7.jpg" alt="" />
+
+        <img class="row__poster" src="images/small-movie8.jpg" alt="" />
+      </div>
+    </div>
+
+    <script>
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 100) {
+          nav.classList.add('nav__black');
+        } else {
+          nav.classList.remove('nav__black');
+        }
+      });
+    </script>
+  </body>
 </html>
