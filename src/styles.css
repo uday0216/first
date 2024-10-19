@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #111;
+<<<<<<< HEAD
   overflow-x: hidden;
 }
 
@@ -14,6 +15,12 @@ body {
 .row__poster {
   width: auto;
   max-width: 150px; /* Prevent large zoom */
+=======
+}
+
+.row__poster {
+  width: 100%;
+>>>>>>> 639eaed (netflix)
   object-fit: contain;
   max-height: 100px;
   margin-right: 10px;
@@ -29,7 +36,11 @@ body {
 }
 
 .row__poster:hover {
+<<<<<<< HEAD
   transform: scale(1.03); /* Reduced zoom */
+=======
+  transform: scale(1.08);
+>>>>>>> 639eaed (netflix)
 }
 
 .row__posters::-webkit-scrollbar {
@@ -37,11 +48,19 @@ body {
 }
 
 .row__posterLarge {
+<<<<<<< HEAD
   max-height: 180px;
 }
 
 .row__posterLarge:hover {
   transform: scale(1.05); /* Reduced zoom on large posters */
+=======
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.09);
+>>>>>>> 639eaed (netflix)
 }
 
 .row {
@@ -49,14 +68,22 @@ body {
   margin-left: 20px;
 }
 
+<<<<<<< HEAD
 /* Banner */
+=======
+/* banner */
+>>>>>>> 639eaed (netflix)
 .banner {
   background-image: url('images/banner.jpg');
   background-size: cover;
   background-position: center center;
   color: white;
   object-fit: contain;
+<<<<<<< HEAD
   height: 300px; /* Reduced banner height */
+=======
+  height: 448px;
+>>>>>>> 639eaed (netflix)
 }
 
 .banner__contents {
@@ -107,7 +134,12 @@ body {
   background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
 }
 
+<<<<<<< HEAD
 /* Navigation Bar */
+=======
+/* nav */
+
+>>>>>>> 639eaed (netflix)
 .nav__logo {
   width: 80px;
   object-fit: contain;
@@ -125,6 +157,10 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 20px;
+<<<<<<< HEAD
+=======
+  /* background-color: #111; */
+>>>>>>> 639eaed (netflix)
   z-index: 1;
   transition-timing-function: ease-in;
   transition: all 0.5s;
@@ -132,4 +168,8 @@ body {
 
 .nav__black {
   background-color: #111;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 639eaed (netflix)
